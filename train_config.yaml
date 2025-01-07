@@ -1,0 +1,19 @@
+exp: TextClassification
+
+mode:
+    - train
+
+models: 
+      hf_text_classification_model:
+          - google-bert/bert-base-uncased
+
+trainfpath: nyu-mll/glue:mnli:train
+validfpath: nyu-mll/glue:mnli:validation_matched
+modelfpath: mnli_models/mnli_model1
+
+numLabels: 3
+
+textLabel: premise
+pairLabel: hypothesis
+
+loadPretrained: False

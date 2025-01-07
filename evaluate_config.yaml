@@ -1,0 +1,18 @@
+exp: TextClassification
+
+mode:
+    - evaluate
+
+models: 
+      hf_text_classification_model:
+          - mnli_models/mnli_model4 #Used same config file for model 0-4
+
+datafpath: HANS_set.tsv
+
+predfpath: results/res4.tsv
+
+numLabels: 3
+
+textLabel: sentence1
+pairLabel: sentence2
+
